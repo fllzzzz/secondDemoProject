@@ -1,0 +1,44 @@
+ :root {
+	--fade-time:0.7s;
+ }
+ 
+ body {
+	margin: 20px;
+	padding: 0;
+	background-color: #333;
+ }
+
+ .container {
+	border: #fff solid 2px;
+	max-width: 720px;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column;
+ }
+.previewImage{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+ .displayImage #currentImage {
+	width: 100%;
+ }
+
+ .previewImage img {
+	width: 30%;
+	border: 1px solid white;
+	flex-grow: 1;
+	cursor: pointer;
+ }
+
+ /* 0.7s 淡入淡出动画 */
+ .dynamic-fade {
+	opacity: 0;
+	animation: dynamicFade var(--fade-time) ease-in 1 forwards;
+ }
+
+ @keyframes dynamicFade {
+	to {
+		opacity: 1;
+	}
+ }
